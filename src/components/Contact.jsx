@@ -37,9 +37,9 @@ const Contact = () => {
         import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
         {
           from_name: form.name,
-          to_name: "JavaScript Mastery",
+          to_name: "Muhammad Ahmed",
           from_email: form.email,
-          to_email: "sujata@jsmastery.pro",
+          to_email: "ahmedhc.dev@gmail.com",
           message: form.message,
         },
         import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
@@ -47,7 +47,17 @@ const Contact = () => {
       .then(
         () => {
           setLoading(false);
-          alert("Thank you. I will get back to you as soon as possible.");
+          toast.success('Thank you. I will get back to you as soon as possible.', {
+            style: {
+              border: '1px solid #713200',
+              padding: '16px',
+              color: '#713200',
+            },
+            iconTheme: {
+              primary: '#713200',
+              secondary: '#FFFAEE',
+            },
+          });
 
           setForm({
             name: "",
@@ -58,8 +68,7 @@ const Contact = () => {
         (error) => {
           setLoading(false);
           console.error(error);
-
-          alert("Ahh, something went wrong. Please try again.");
+          toast.error("Ahh, something went wrong. Please try again.")
         }
       );
   };
@@ -129,7 +138,14 @@ const Contact = () => {
       >
         <EarthCanvas />
       </motion.div>
+
+
+      <Toaster
+  position="top-right"
+  reverseOrder={false}
+/>
     </div>
+    
   );
 };
 

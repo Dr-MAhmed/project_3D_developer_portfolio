@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
-
+@import url('https://fonts.cdnfonts.com/css/florisha');
+                
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -201,4 +202,9 @@
       -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.5),
       -2.6em 0em 0 0em rgba(255, 255, 255, 0.7), -1.8em -1.8em 0 0em #ffffff;
   }
+}
+
+
+.florisha{
+  font-family: 'Florisha', sans-serif;
 }
